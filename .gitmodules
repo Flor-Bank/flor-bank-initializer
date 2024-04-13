@@ -1,0 +1,3 @@
+[submodule "gateway-ms"]
+	path = gateway-ms
+	url = https://github.com/Flor-Bank/gateway-ms.git
