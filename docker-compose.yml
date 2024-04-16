@@ -7,8 +7,6 @@ services:
    ports:
      - "8222:8222"
   
-
-
  client-gateway:
    build: ./gateway-ms
    ports:
@@ -21,8 +19,16 @@ services:
      - PORT=3000
      - NATS_SERVERS=nats://nats-server:4222
 
-
-
+# !TODO: create transaction-ms microservice instance 
+# transaction-ms:
+#    build: ./transaction-ms
+#    volumes:
+#      - ./transaction-ms/src:/usr/src/app/src
+#    command: npm run start:dev
+#    environment:
+#      - PORT=3009
+#      - NATS_SERVERS=nats://nats-server:4222
+#      - DATABASE_URL=${TRANSACTION_DATABASE_URL}
 
  auth-ms:
    build: ./auth-ms
