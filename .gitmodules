@@ -7,3 +7,6 @@
 [submodule "transaction-ms"]
 	path = transaction-ms
 	url = https://github.com/Flor-Bank/transaction-ms.git
+[submodule "account-ms"]
+	path = account-ms
+	url = https://github.com/Flor-Bank/account-ms.git
