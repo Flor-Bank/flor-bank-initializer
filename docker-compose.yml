@@ -55,31 +55,31 @@ services:
 
 
   # fixed-term-deposite MS
-#  fixed-term-deposite-ms:
-#    depends_on:
-#      - fixedTermDeposite_db
-#    build: ./fixed-term-deposite-ms
-#    volumes:
-#      - ./fixed-term-deposite-ms/src:/usr/src/app/src
-#    command: npm run start:dev
-#    environment:
-#      - PORT=3002
-#      - DATABASE_URL=${FIXED_TERM_DEPOSITE_DATABASE_URL}
-#      - NATS_SERVERS=nats://nats-server:4222
+ fixed-term-deposite-ms:
+   depends_on:
+     - fixedTermDeposite_db
+   build: ./fixed-term-deposite-ms
+   volumes:
+     - ./fixed-term-deposite-ms/src:/usr/src/app/src
+   command: npm run start:dev
+   environment:
+     - PORT=3002
+     - DATABASE_URL=${FIXED_TERM_DEPOSITE_DATABASE_URL}
+     - NATS_SERVERS=nats://nats-server:4222
 
 
 
 
  # fixed-term-deposite DB
-#  fixedTermDeposite_db:
-  #  container_name: fixedTermDeposite_database
-  #  image: postgres:16.2
-  #  restart: always
-  #  volumes:
-  #    - ./fixed-term-deposite-ms/postgres:/var/lib/postgresql/data
-  #  ports:
-  #    - 5432:5432
-  #  environment:
-  #    - POSTGRES_USER=${FIXED_TERM_DEPOSITE_POSTGRES_USER}
-  #    - POSTGRES_PASSWORD=${FIXED_TERM_DEPOSITE_POSTGRES_PASSWORD}
-  #    - POSTGRES_DB=fixedTermDeposite_db
+ fixedTermDeposite_db:
+   container_name: fixedTermDeposite_database
+   image: postgres:16.2
+   restart: always
+   volumes:
+     - ./fixed-term-deposite-ms/postgres:/var/lib/postgresql/data
+   ports:
+     - 5432:5432
+   environment:
+     - POSTGRES_USER=${FIXED_TERM_DEPOSITE_POSTGRES_USER}
+     - POSTGRES_PASSWORD=${FIXED_TERM_DEPOSITE_POSTGRES_PASSWORD}
+     - POSTGRES_DB=fixedTermDeposite_db
