@@ -10,3 +10,6 @@
 [submodule "account-ms"]
 	path = account-ms
 	url = https://github.com/Flor-Bank/account-ms.git
+[submodule "fixed-term-deposite-ms"]
+	path = fixed-term-deposite-ms
+	url = https://github.com/Flor-Bank/fixed-term-deposite-ms.git
